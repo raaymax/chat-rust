@@ -1,0 +1,4 @@
+
+[default.databases.db]
+url = "mongodb://chat:chat@localhost:27017/chat?authSource=admin"
+

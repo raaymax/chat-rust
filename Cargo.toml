@@ -1,0 +1,16 @@
+[package]
+name = "ChatRust"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[default.databases.db_name]
+url = "mongodb://chat:chat@localhost:27017/chat?authSource=admin"
+
+
+[dependencies]
+mongodb = "2.7.1"
+rocket = "0.5.0"
+rocket_db_pools = { version = "0.1.0", features = ["mongodb"] }
+serde = { version = "1.0.193", features = ["serde_derive"] }
+tokio = { version = "1", features = ["full"] }
