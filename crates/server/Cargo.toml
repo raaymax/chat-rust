@@ -1,20 +1,18 @@
-[workspace]
-members = [
-    "crates/server",
-]
-
 [package]
-name = "ChatRust"
+name = "server"
 version = "0.1.0"
 edition = "2021"
+
+[lib]
+path = "src/lib.rs"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 mongodb = "2.7.1"
-rocket = "0.5.0"
+rocket = {"version" = "0.5.0", features = ["json"]}
+rocket_contrib = "0.4.11"
 rocket_db_pools = { version = "0.1.0", features = ["mongodb"] }
 serde = { version = "1.0.193", features = ["serde_derive"] }
+serde_derive = "1.0.193"
 tokio = { version = "1", features = ["full"] }
-server = { path = "./crates/server" }
-rocket_contrib = "0.4.11"

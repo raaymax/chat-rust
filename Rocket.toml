@@ -2,3 +2,7 @@
 [default.databases.db]
 url = "mongodb://chat:chat@localhost:27017/chat?authSource=admin"
 
+[dependencies.rocket_contrib]
+version = "0.4.10"
+default-features = false
+features = ["json"]
